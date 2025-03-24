@@ -14,7 +14,7 @@ The capabilities of Large Language Models (**LLM's**) to process data from diffe
 ```plaintext
 TBA
 ```
-<img src="./media/LLMSciSci_dataset.png" align="center" width=400 height=500>
+<img src="./media/LLMSciSci_dataset.png" align="center" width=700 height=500>
 
 ### Session-1:
 For this hands-on session we are going to test out three use-cases, **Labelling**, **Information Extraction**, and **LLM as a Judge**. We are going to use the dataset from the paper <u>Laying Foundations to Quantify the "Effort of Reproducibility"</u> **[2]**. The dataset and the tasks outline a good experimentation framework to effectively utilize Large language models for computational social science tasks **[3]**.
@@ -37,7 +37,7 @@ For this hands-on session we are going to use the Reproducibility dataset from t
 **[4]** [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/pdf/2305.18290)
 
 ### Authors and Contributors:
-[Akhil Pandey](https://github.com/akhilpandey95), Want to add your name ?
+[Akhil Pandey](https://github.com/akhilpandey95), Want to contribute see your name here :), [Open an Issue](https://github.com/akhilpandey95/LLMSciSci/issues/new) ?
 
 ### Acknowledgement
 The computing resources for this work is supported completely by the Google Cloud Research Credits Grant **331845891**.
