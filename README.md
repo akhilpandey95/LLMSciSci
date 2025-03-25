@@ -27,6 +27,31 @@ TBA
 ### Session-3:
 For this hands-on session we are going to use the Reproducibility dataset from the paper <u>Laying Foundations to Quantify the "Effort of Reproducibility"</u> **[2]** to preference tune answers using the **Direct Preference Optimization(DPO)** algorithm. *DPO* unlike other reinforcement algorithms directly applies maximum likelihood on the preference dataset to perform implicit reward modeling. Ideally, similar to most RL algorithms we would be applying the same reward maximization via **KL** divergence constraint. Theoretically, *DPO* is RL free, and doing a simple classification on a given a dataset $D$ that includes **chosen** and **rejected** responses. Learn more about *DPO* from the original paper **[4]**.
 
+$$
+L_{DPO}(\pi_{LLMSciSci}: \pi_{LLM-instruct})
+\;=\; - \,\mathbb{E}{\bigl(x,\,r^+,\,r^-\bigr) \sim D_{ReproEffortDataset}}
+\Bigl[
+\log \,\sigma\!\Bigl(
+r_\theta(x,r^+) \;-\; r_\theta(x,r^-)
+\Bigr)
+\Bigr]
+$$
+
+$$
+r_\theta(x, r)
+\;=\;
+\beta \,\log \frac{\pi_{LLMSciSci}(r \,\vert\, x)}{\pi_{LLM-instruct}(r \,\vert\, x)}
+$$
+
+where the $r_{\theta}$ is computed
+- using $r^+$(human preferred response), and $r^-$(rejected responses).
+- for the models $\pi_{LLMSciSci}$ and $\pi_{LLM-instruct}$.
+- $r_{\theta}$  captures the log-probability of the *chosen* vs *rejected* responses on $D_{ReproEffortDataset}$.
+- $\pi_{LLM-instruct}$ is the instruct-tuned open weight reference model.
+- $\pi_{LLMSciSci}$ is the final RL model intended to be preference-tuned on $D_{ReproEffortDataset}$.
+
+DPO Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akhilpandey95/LLMSciSci/blob/main/notebooks/LLMs_SciSci_DPO.ipynb)
+
 ### References(s):
 **[1]** [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)
 <br>
