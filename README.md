@@ -1,7 +1,7 @@
 # LLMSciSci
 Experiments, and how-to guide for the lecture "Large language models for Scientometrics"
 
-<img src="https://images.ctfassets.net/cnu0m8re1exe/sIyPeDxgpIluQqQWK8nhS/67004d28ebbce2ca1f654a7a0afd92b3/SciSci.png" align="center" width=400 height=500>
+<img src="./media/SciSci.png" align="center" width=400 height=500>
 
 >(Credit: Davide Bonazzi) from [*Discover Magazine*](https://www.discovermagazine.com/the-sciences/the-science-of-science)
 
